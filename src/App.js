@@ -11,8 +11,10 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <header className="App-header">
-            <Postform />
-            <Posts />
+            <div className="App-container">
+              <Postform />
+              <Posts />
+            </div>
           </header>
         </div>
       </Provider>
