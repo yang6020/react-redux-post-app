@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../../redux/actions/postActions';
-import mapAgeCleaner from 'map-age-cleaner';
+import Proptypes from 'prop-types';
 
 class Posts extends Component {
   componentDidMount() {
@@ -23,6 +23,11 @@ class Posts extends Component {
     );
   }
 }
+
+Posts.propTypes = {
+  fetchPosts: Proptypes.func.isRequired,
+  posts: Proptypes.array.isRequired,
+};
 const mapStateToProps = state => ({
   posts: state.posts.items,
 });
